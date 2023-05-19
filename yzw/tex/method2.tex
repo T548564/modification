@@ -242,17 +242,19 @@ $Loss_{FT}$本质是希望近边界数据更靠近目标分类边界，但是为
 
 结合生成使用CW-$L_2$生成初始近边界数据和使用DCGAN私有化近边界数据的过程，加上假设检验比对结果的差异性，本文提出方法的整体执行流程如图\ref{方法整体流程图}所示。
 
-\begin{figure}[htb]%%图,[htbp]是浮动格式
-	\centering
-	\setlength{\abovecaptionskip}{5mm} %图片标题与图片距离
-	%	\vspace{-2mm}
-	%	\setlength{\belowcaptionskip}{-3mm} %调整图片标题与下文距离
-	\includegraphics[width=0.5\linewidth]{方法整体流程图.pdf}
-	\caption{方法整体流程图}
-	\label{方法整体流程图}
-	%	\vspace{-3mm}  %调整图片标题与下文距离，与\setlength{\belowcaptionskip}{-3mm}等效。
-	\end {figure}
+
 
 \section{本章小结}
 
 近边界数据是本文方法推断所有权的依据，不能轻易被盗窃者复制伪造。本章使用初始近边界数据训练DCGAN，使之学习到近边界数据的特征，然后使用生成器生成新的、私有化的近边界数据，使所有者保持私有数据的优势。接着设计了新的损失函数并微调源模型，使近边界数据更加靠近目标分类边界,增强本文方法面对各种模型盗窃技术的性能和防御性。然后在私有近边界数据的基础上，提出本文基于近边界数据的模型所有权推断方法，最后提出使用假设检验的方法来比对推测结果的差异性。
+
+\begin{figure}[htb]%%图,[htbp]是浮动格式
+	\centering
+	\setlength{\abovecaptionskip}{5mm} %图片标题与图片距离
+	%		\vspace{-2mm}
+	%	\setlength{\belowcaptionskip}{-3mm} %调整图片标题与下文距离
+	\includegraphics[width=0.50\linewidth]{方法整体流程图.pdf}
+	\caption{方法整体流程图}
+	\label{方法整体流程图}
+	%	\vspace{-3mm}  %调整图片标题与下文距离，与\setlength{\belowcaptionskip}{-3mm}等效。
+	\end {figure}
